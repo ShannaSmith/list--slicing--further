@@ -82,9 +82,8 @@ def custom_insert(input_list, index, value):
 
     """
 
-    
-    input_list[index].append(value)
-
+    #list.insert(pos, elmnt)
+    input_list.insert(index, value)
 
 def custom_remove(input_list, value):
     """Remove the first item of the value in list.
@@ -102,7 +101,7 @@ def custom_remove(input_list, value):
 
     """
 
-    input_list.pop(value)
+    input_list.remove(value)
 
 
 def custom_pop(input_list):
@@ -138,7 +137,9 @@ def custom_index(input_list, value):
 
     """
 
-    
+    for i in range(len(input_list)):
+        if input_list[i] == value:
+            return i 
 
 
 def custom_count(input_list, value):
@@ -154,7 +155,7 @@ def custom_count(input_list, value):
 
     """
 
-    return 0
+    return input_list.count(value)
 
 
 def custom_reverse(input_list):
@@ -173,7 +174,7 @@ def custom_reverse(input_list):
 
     """
 
-    pass
+    input_list.reverse()
 
 
 def custom_contains(input_list, value):
@@ -193,8 +194,13 @@ def custom_contains(input_list, value):
 
     """
 
-    return None
+    if value in input_list:
+        return True
+    else:
+        return False 
 
+#let x = input_list.find(value => value)
+#return x
 
 def custom_equality(some_list, another_list):
     """Return True if passed lists are identical, False otherwise.
@@ -212,4 +218,7 @@ def custom_equality(some_list, another_list):
 
     """
 
-    return None
+    if some_list == another_list:
+        return True
+    else:
+        return False 
