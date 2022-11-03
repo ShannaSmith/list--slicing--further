@@ -199,7 +199,7 @@ def custom_contains(input_list, value):
     else:
         return False 
 
-#let x = input_list.find(value => value)
+#let x = input_list.find((value, i) => value === input_list[i])
 #return x
 
 def custom_equality(some_list, another_list):
